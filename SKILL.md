@@ -23,8 +23,8 @@ notebook do Colab indicado no README do repositório.
 4. Verificações numéricas primeiro (`fit`, `compare`, lint do `draw`). Só olhas para uma imagem (uma vez,
    reduzida) quando um número falha e precisas de perceber porquê.
 5. Corrige editando o JSON. Nunca reescrevas o ficheiro inteiro.
-6. Lê `references/dsl.md` antes de escrever a primeira especificação. Lê `references/normas.md` só
-   quando tiveres de escolher vistas ou cortes.
+6. Corre `isovista dsl` antes de escrever a primeira especificação. Corre `isovista normas` só quando
+   tiveres de escolher vistas ou cortes.
 
 ## Modo A: isométrico → vistas cotadas
 **A0. Preparar a imagem.**
@@ -52,7 +52,7 @@ isovista fit peca.json img.png --grid --pts '[[0,0,0,"15,23"],[6,0,0,"15,29"],[0
   aqui, por isso olha para as coordenadas antes de mexer.
 - Se falhar, acrescenta `--overlay ov.png` e olha uma vez para um recorte.
 
-**A3. Escolher as vistas (☐ em `references/normas.md`) e desenhar:**
+**A3. Escolher as vistas (☐ em `isovista normas`) e desenhar:**
 ```bash
 isovista draw peca.json -o desenho            # SVG + PNG + PDF + JSON (com lint)
 ```
@@ -62,7 +62,7 @@ isovista draw peca.json -o desenho            # SVG + PNG + PDF + JSON (com lint
 
 **A4. Ida-e-volta às cegas (obrigatória).** É o passo mais caro: usa um modelo mais pequeno (Sonnet ou
 Haiku) e no máximo 4 recortes ampliados.
-- Um contexto novo, sem acesso a `peca.json`, recebe só `desenho.png` e `references/dsl.md` e escreve
+- Um contexto novo, sem acesso a `peca.json`, recebe só `desenho.png` e a saída de `isovista dsl` e escreve
   `inverso.json` com o PROMPT DE INVERSÃO abaixo.
 - No Claude, usa um subagente com esse prompt. Noutras IAs, abre uma conversa nova com a imagem e o prompt.
 
@@ -85,7 +85,7 @@ isovista fit inverso.json img.png --grid --pts '...'   # o inverso também tem d
   (≥ 3 pontos por vista; `precision` ≥ 0,93).
 - **B3.** `isovista iso peca.json -o iso --unit 10` gera o isométrico sobre reticulado em A4.
   `--view fr|fl|br|bl` escolhe o lado observado.
-- **B4.** Ida-e-volta às cegas: um contexto novo recebe só `iso.png` e `dsl.md` e escreve `inverso.json`.
+- **B4.** Ida-e-volta às cegas: um contexto novo recebe só `iso.png` e a saída de `isovista dsl` e escreve `inverso.json`.
 - **B5.** `isovista compare peca.json inverso.json`, e `fitviews` do inverso sobre o desenho original.
 
 ## PROMPT DE INVERSÃO (copiar tal como está, sem anexar o JSON original)

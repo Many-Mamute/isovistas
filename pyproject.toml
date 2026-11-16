@@ -16,3 +16,6 @@ isovista = "isovista.cli:main"
 
 [tool.setuptools]
 packages = ["isovista"]
+
+[tool.setuptools.package-data]
+isovista = ["data/*.md"]

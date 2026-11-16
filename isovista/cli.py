@@ -13,6 +13,9 @@ def main(argv=None):
     ap = argparse.ArgumentParser(prog="isovista", description="Desenho técnico: isométrico <-> vistas (normas ISO).")
     sp = ap.add_subparsers(dest="cmd", required=True)
 
+    sp.add_parser("dsl", help="mostra a linguagem JSON da peça")
+    sp.add_parser("normas", help="mostra o resumo das normas aplicadas")
+
     a = sp.add_parser("check", help="constrói o sólido da especificação e resume-o")
     a.add_argument("spec")
 
@@ -64,6 +67,10 @@ def main(argv=None):
 
     args = ap.parse_args(argv)
     t0 = time.time()
+    if args.cmd in ("dsl", "normas"):
+        import pathlib
+        print((pathlib.Path(__file__).parent / "data" / f"{args.cmd}.md").read_text())
+        return
     if args.cmd in ("check", "draw", "iso", "fit", "fitviews", "compare"):
         from .spec import Model
     if args.cmd == "check":
