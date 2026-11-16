@@ -1,0 +1,211 @@
+{
+ "sheet": "A3",
+ "scale": "1:1",
+ "views": [
+  {
+   "id": "A",
+   "label": "A",
+   "dir": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "section": true,
+   "origin": [
+    125.25680000000001,
+    127.25
+   ]
+  },
+  {
+   "id": "T",
+   "label": null,
+   "dir": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "section": false,
+   "origin": [
+    125.25680000000001,
+    247.05
+   ]
+  },
+  {
+   "id": "B",
+   "label": "B",
+   "dir": [
+    0.4472,
+    0.8944,
+    0.0
+   ],
+   "section": false,
+   "origin": [
+    265,
+    135
+   ]
+  },
+  {
+   "id": "C",
+   "label": "C",
+   "dir": [
+    -0.4472,
+    0.2236,
+    -0.866
+   ],
+   "section": false,
+   "origin": [
+    295,
+    289
+   ]
+  }
+ ],
+ "dims": [
+  {
+   "kind": "dia",
+   "view": "A",
+   "text": "Ø40"
+  },
+  {
+   "kind": "dia",
+   "view": "A",
+   "text": "Ø20"
+  },
+  {
+   "kind": "dia",
+   "view": "A",
+   "text": "Ø30"
+  },
+  {
+   "kind": "rad",
+   "view": "A",
+   "text": "R30"
+  },
+  {
+   "kind": "rad",
+   "view": "T",
+   "text": "2× R10"
+  },
+  {
+   "kind": "rad",
+   "view": "A",
+   "text": "R25"
+  },
+  {
+   "kind": "rad",
+   "view": "C",
+   "text": "R10"
+  },
+  {
+   "kind": "note",
+   "view": "T",
+   "text": "2× Ø10   Ø15×90°"
+  },
+  {
+   "kind": "lin",
+   "view": "A",
+   "text": "10"
+  },
+  {
+   "kind": "lin",
+   "view": "T",
+   "text": "110"
+  },
+  {
+   "kind": "lin",
+   "view": "A",
+   "text": "80"
+  },
+  {
+   "kind": "lin",
+   "view": "A",
+   "text": "10"
+  },
+  {
+   "kind": "lin",
+   "view": "T",
+   "text": "25"
+  },
+  {
+   "kind": "lin",
+   "view": "T",
+   "text": "70"
+  },
+  {
+   "kind": "lin",
+   "view": "T",
+   "text": "5"
+  },
+  {
+   "kind": "lin",
+   "view": "T",
+   "text": "20"
+  },
+  {
+   "kind": "lin",
+   "view": "T",
+   "text": "50"
+  },
+  {
+   "kind": "lin",
+   "view": "T",
+   "text": "10"
+  },
+  {
+   "kind": "lin",
+   "view": "T",
+   "text": "50"
+  },
+  {
+   "kind": "lin",
+   "view": "T",
+   "text": "50"
+  },
+  {
+   "kind": "lin",
+   "view": "A",
+   "text": "60"
+  },
+  {
+   "kind": "lin",
+   "view": "A",
+   "text": "15"
+  },
+  {
+   "kind": "lin",
+   "view": "A",
+   "text": "10"
+  },
+  {
+   "kind": "lin",
+   "view": "A",
+   "text": "10"
+  },
+  {
+   "kind": "lin",
+   "view": "A",
+   "text": "5"
+  },
+  {
+   "kind": "lin",
+   "view": "C",
+   "text": "40"
+  },
+  {
+   "kind": "lin",
+   "view": "C",
+   "text": "20"
+  },
+  {
+   "kind": "ang",
+   "view": "B",
+   "text": "150°"
+  }
+ ],
+ "lint": [
+  "texto 'R30' cruza 1 linha(s) da peça"
+ ],
+ "stats": {
+  "text_text": 0,
+  "text_geo": 1
+ }
+}

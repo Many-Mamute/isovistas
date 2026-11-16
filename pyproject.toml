@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "isovista"
+version = "0.1.0"
+description = "Desenho técnico: isométrico <-> vistas ortográficas cotadas (ISO 128/129/5456/5457/7200), com verificação de ida-e-volta"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["build123d>=0.8", "numpy", "scipy", "pillow", "matplotlib"]
+
+[project.scripts]
+isovista = "isovista.cli:main"
+
+[tool.setuptools]
+packages = ["isovista"]
