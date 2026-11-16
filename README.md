@@ -1,5 +1,12 @@
 # isovistas
 
+## Usar só no Claude (sem instalar nada)
+1. Em claude.ai → Definições → Capacidades, liga **Code execution and file creation**.
+2. Cola numa conversa nova:
+   `Lê https://raw.githubusercontent.com/Many-Mamute/isovistas/main/USAR_NO_CLAUDE.md e segue-o. Depois envio a imagem da peça.`
+3. Envia a imagem da peça (screenshot ou foto). Recebes o desenho cotado em PDF.
+
+
 Desenho técnico com IA: **isométrico ⇄ vistas ortográficas cotadas**, segundo as normas ISO usadas na
 FEUP (ISO 128, 129-1, 5456-2, 5457, 7200, 3098). Funciona a partir de screenshots, PDFs ou fotos de livro.
 Inclui uma **verificação de ida-e-volta às cegas**: o resultado é convertido de volta, sem acesso ao
